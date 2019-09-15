@@ -5,6 +5,7 @@ import {
 } from 'react-vr';
 // 引入Canvas
 import Canvas from './components/Canvas'
+import ButtonList from './components/ButtonList'
 
 export default class react_360 extends Component {
   
@@ -19,6 +20,7 @@ export default class react_360 extends Component {
     return (
       <View>
         <Canvas src={this.state.src} />
+        <ButtonList></ButtonList>
       </View>
     );
   }
