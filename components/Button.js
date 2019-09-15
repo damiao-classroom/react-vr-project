@@ -11,9 +11,22 @@ class Button extends Component{
 
     render(){
         return(
-            <View>
-                <VrButton>
+            <View 
+                style={{
+                    alignItems: 'center',
+                    flexDirection: 'row',
+                    margin: 0.0125,
+                    width: 0.7
+                }}
+            >
+                <VrButton onClick={() => { 
+                    this.props.onClick()
+                }}>
                     <Image
+                        style={{
+                            width: 0.7,
+                            height: 0.7
+                        }}
                         source={asset(this.props.src)}
                     >
                     </Image>

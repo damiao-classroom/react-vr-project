@@ -18,10 +18,22 @@ class ButtonList extends Component{
 
     render(){
         return(
-            <View>
+            <View
+                style={{
+                    flexDirection: 'row',
+                    flexWrap: 'wrap',
+                    transform: [
+                        { rotateX: -12 },
+                        { translate: [-1.5, 0, -3] }
+                    ],
+                    width: 3
+                }}
+            >
                 {
                     this.state.buttons.map(v => {
-                        return (<Button src={v.buttonSrc} key={v.key}></Button>)
+                        return (<Button src={v.buttonSrc} key={v.key} onClick={() => {
+                            this.props.onClick(v.imageSrc)
+                        }}></Button>)
                     })
                 }
             </View>

@@ -20,7 +20,11 @@ export default class react_360 extends Component {
     return (
       <View>
         <Canvas src={this.state.src} />
-        <ButtonList></ButtonList>
+        <ButtonList onClick={(src) => {
+          this.setState({
+            src: src
+          })
+        }}></ButtonList>
       </View>
     );
   }

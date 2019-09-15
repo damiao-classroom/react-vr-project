@@ -11,7 +11,7 @@ class Canvas extends Component{
 
     render () {
         return (
-            <Pano source={asset(this.state.src)} />
+            <Pano source={asset(this.props.src)} />
         )
     }
 
